@@ -15,7 +15,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 console.log('la base de datos esta en:' + _config.config.DB);
 
 _mongoose2.default.connect(_config.config.DB + 'sismos', function (err, res) {
-	if (err) return console.log('Error al conectarse a mongodb' + _config.config.DB);
+	if (err) return console.log('Error al conectarse a mongodb' + err);
 
 	console.log('Conexion con mongodb exitosa');
 
