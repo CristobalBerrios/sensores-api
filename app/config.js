@@ -1,5 +1,5 @@
 export const config = {
   PORT: process.env.PORT || 3001,
-  DB: 'mongodb://xiters:123@ds119598.mlab.com:19598/',
+  DB: process.env.MONGOLAB_URI || 'mongodb://localhost:27017/sismos',
   SECRET: 'jwtsecret'
 }
