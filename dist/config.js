@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 var config = exports.config = {
   PORT: process.env.PORT || 3001,
-  DB: process.env.MONGOLAB_URI || 'mongodb://xiters:123@ds119598.mlab.com:19598/',
+  DB: 'mongodb://xiters:123@ds119598.mlab.com:19598/',
   SECRET: 'jwtsecret'
 };
 //# sourceMappingURL=config.js.map
