@@ -19,6 +19,8 @@ class UserController {
     })
   }
 
+  //Funcion para login
+
   signIn (req, res) {
     userModel.findOne({email: req.body.email}, (err, user) => {
       if (err) return res.status(500).send({message: err})
