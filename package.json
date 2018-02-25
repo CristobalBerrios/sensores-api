@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node bin/production",
     "clean": "rm -rf dist/",
-    "dev": "node bin/dev",
+    "dev": "nodemon bin/dev",
     "test:build": "babel server/index.js -o server/index.babel.js",
     "build": "npm run clean && mkdir dist && babel app -s -d dist",
     "production": "npm run build && node bin/production"
