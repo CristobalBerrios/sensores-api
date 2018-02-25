@@ -47,7 +47,7 @@ class SensorController {
   remove (req, res) {
     const sensorId = req.params.id
 
-    sensorModel.findByIdAndRemove(teamId, (err, sensor) => {
+    sensorModel.findByIdAndRemove(sensorId, (err, sensor) => {
       if (err) return res.status(500).send({message: 'error al eliminar el sensor'})
       if(!sensor) return res.status(404).send({message: 'sensor no encontrado al eliminar'})
       res.status(200).send({message: 'sensor eliminado', id: sensor._id})
