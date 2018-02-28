@@ -26,7 +26,7 @@ response: {
 "email": "admin@sismos.com"
 }
 
-// INCLUIR EN LAS SIGUIENTES PETICIONES ESTE ENCABEZADO EN LOS HEADERS
+// INCLUIR EN LAS SIGUIENTES PETICIONES ESTE ENCABEZADO
 
 Authorization: "el token recibido"
 
