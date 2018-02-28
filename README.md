@@ -78,11 +78,11 @@ example: {
 POST /api/historical -> Se envia una lista de sensores con su intensidad registrada.
 example: [
 	{
-		_id: "idSensor1",
-		intensity: 1.8
+	  "_id": "idSensor1",
+          "intensity": 1.8
 	},
 	{
-		_id: "idSensor2",
-		intesity: 2.1
+          "_id": "idSensor2",
+          "intesity": 2.1
 	}
 ]```
