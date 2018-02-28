@@ -30,6 +30,15 @@ response: {
 
 Authorization: "el token recibido"
 
+// Cluster Routes
+
+GET /api/cluster -> Devuelve todos los cluster que existen en la bd
+
+POST /api/cluster -> Se envia un cluster para guardarlo
+example: {
+	"name": "Cluster #1"
+}
+
 // Sensor Routes
 
 GET /api/sensor -> Devuelve todos los sensores que existen en la bd.
