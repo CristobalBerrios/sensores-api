@@ -12,6 +12,9 @@ $ npm run build
 
 # Iniciar aplicación en producción
 $ npm start
+
+# Correr seeder para usuario y cluster
+$ npm run seed
 ```
 ## Documentación API
 ``` javascript
