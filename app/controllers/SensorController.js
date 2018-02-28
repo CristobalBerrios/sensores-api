@@ -17,7 +17,7 @@ class SensorController {
     sensorModel.findById(sensorId, (err, sensor) => {
       if (err) return res.status(500).send({message: 'error al buscar el sensor'})
       if (!sensor) return res.status(404).send({message: 'el sensor no existe'})
-      res.status(200).send({sensor})
+      res.status(200).send(sensor)
     })
   }
 
