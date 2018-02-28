@@ -9,7 +9,8 @@
     "dev": "nodemon bin/dev",
     "test:build": "babel server/index.js -o server/index.babel.js",
     "build": "npm run clean && mkdir dist && babel app -s -d dist",
-    "production": "npm run build && node bin/production"
+    "production": "npm run build && node bin/production",
+    "seed": "node bin/seed"
   },
   "author": "Cristobal Berrios",
   "license": "ISC",
@@ -20,7 +21,8 @@
     "express": "^4.16.2",
     "jwt-simple": "^0.5.1",
     "moment": "^2.20.1",
-    "mongoose": "^5.0.4"
+    "mongoose": "^5.0.4",
+    "mongoose-seed": "^0.4.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
