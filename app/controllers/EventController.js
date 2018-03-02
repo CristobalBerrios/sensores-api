@@ -1,4 +1,5 @@
 import {eventModel} from '../models/eventModel'
+import {sensorModel} from '../models/sensorModel'
 
 class EventController {
   
@@ -14,6 +15,11 @@ class EventController {
 
     event.save((err, newEvent) => {
       if (err) return res.status(500).send({message: 'Error al guardar el evento'})
+      let fecha = newEvent.date
+      let sensors = newEvent.sensors
+      sensors.forEach(id => {
+        sensorModel.findByIdAndUpdate(id,{ $set: {last_event: fecha}}, {new: true},() => {})
+      })
       return res.status(200).send({newEvent})
     })
   }
