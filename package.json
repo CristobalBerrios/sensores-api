@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node bin/production",
+    "start": "npm run seed && node bin/production",
     "clean": "rm -rf dist/",
     "dev": "nodemon bin/dev",
     "test:build": "babel server/index.js -o server/index.babel.js",
