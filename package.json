@@ -10,7 +10,8 @@
     "test:build": "babel server/index.js -o server/index.babel.js",
     "build": "npm run clean && mkdir dist && babel app -s -d dist",
     "production": "npm run build && node bin/production",
-    "seed": "node bin/seed"
+    "seed": "node bin/seed",
+    "seed-production": "node bin/seed.production"
   },
   "author": "Cristobal Berrios",
   "license": "ISC",
