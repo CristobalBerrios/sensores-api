@@ -29,6 +29,8 @@ route.post('/event', eventController.save)
 route.use('/cluster', auth.isAuth)
 route.get('/cluster', clusterController.getAll)
 route.post('/cluster', clusterController.save)
+route.put('/cluster/:id', clusterController.update)
+route.delete('/cluster/:id', clusterController.remove)
 
 // Historico Routes
 
