@@ -27,7 +27,7 @@ class SensorController {
 
     sensor.save((err, newSensor) => {
       if (err) return res.status(500).send({message: 'Error al guardar el sensor'})
-      res.status(200).send({sensor: newSensor})
+      res.status(200).send(newSensor)
     })
   }
 
