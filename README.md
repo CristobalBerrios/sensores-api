@@ -70,7 +70,7 @@ GET /api/event -> Devuelve todos los eventos.
 POST /api/event -> Se envia un evento para guardarlo
 example: {
 	"intensity": 4.4,
-	"clusters": ["idCLuster1", "idCluster2"]
+	"sensors": ["idSensor1", "idSensor2"]
 }
 
 // Historico Routes
