@@ -12,6 +12,9 @@ $ npm run build
 
 # Iniciar aplicación en producción
 $ npm start
+
+# Correr seeder para usuario y cluster
+$ npm run seed
 ```
 ## Documentación API
 ``` javascript
@@ -26,9 +29,18 @@ response: {
 "email": "admin@sismos.com"
 }
 
-// INCLUIR EN LAS SIGUIENTES PETICIONES ESTE ENCABEZADO EN LOS HEADERS
+// INCLUIR EN LAS SIGUIENTES PETICIONES ESTE ENCABEZADO
 
 Authorization: "el token recibido"
+
+// Cluster Routes
+
+GET /api/cluster -> Devuelve todos los cluster que existen en la bd
+
+POST /api/cluster -> Se envia un cluster para guardarlo
+example: {
+	"name": "Cluster #1"
+}
 
 // Sensor Routes
 
@@ -58,7 +70,7 @@ GET /api/event -> Devuelve todos los eventos.
 POST /api/event -> Se envia un evento para guardarlo
 example: {
 	"intensity": 4.4,
-	"clusters": ["idCLuster1", "idCluster2"]
+	"sensors": ["idSensor1", "idSensor2"]
 }
 
 // Historico Routes
@@ -66,11 +78,11 @@ example: {
 POST /api/historical -> Se envia una lista de sensores con su intensidad registrada.
 example: [
 	{
-		_id: "idSensor1",
-		intensity: 1.8
+	  "_id": "idSensor1",
+          "intensity": 1.8
 	},
 	{
-		_id: "idSensor2",
-		intesity: 2.1
+          "_id": "idSensor2",
+          "intesity": 2.1
 	}
 ]```
